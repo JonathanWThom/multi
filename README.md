@@ -1,24 +1,18 @@
-# README
+# Sample Multi DB with PaperTrail Rails App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The paper_trail gem is great. But the `versions` table can get very very large.
+Rails 6 makes it easy to use multiple databases (but pretend they are one via
+ActiveRecord). This can be used to give `versions` its own database that won't
+interfere with your primary.
 
-Things you may want to cover:
+Important files:
 
-* Ruby version
+https://github.com/JonathanWThom/multi/blob/master/config/initializers/paper_trail.rb
 
-* System dependencies
+https://github.com/JonathanWThom/multi/blob/master/config/database.yml
 
-* Configuration
+https://github.com/JonathanWThom/multi/blob/master/db/audit_schema.rb
 
-* Database creation
+https://github.com/JonathanWThom/multi/blob/master/db/schema.rb
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://github.com/JonathanWThom/multi/blob/master/app/models/user.rb
